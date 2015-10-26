@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Tetsuya Negoro, 2015-10
+# NEGORO Tetsuya, 2015-10
 # utilitiy functions and classes
 
 
@@ -23,7 +23,8 @@ def type_check(*argtypes, **kwargtypes):
 
 class UniterableString(str):
 
-    """docstring for UniterableString
+    """String does not implements __iter__ method
+    to prevent dealt as Iterable
     """
     def __new__(cls, *args, **kwargs):
         return str.__new__(cls, *args, **kwargs)
